@@ -1,6 +1,8 @@
-  node_modules/
-  dist/
-  .env
-  *.log
-  .angular/
-  coverage/
+node_modules/
+dist/
+.env
+*.log
+.angular/
+coverage/
+backend/node_modules/
+frontend/node_modules/
