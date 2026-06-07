@@ -11,6 +11,8 @@ import { LogAccesoModule } from './log-acceso/log-acceso.module';
 import { MembresiasModule } from './membresias/membresias.module';
 import { PlanesMembresiaModule } from './planes-membresia/planes-membresia.module';
 import { ReportesModule } from './reportes/reportes.module';
+import { SeedService } from './seed.service';
+import { Usuario } from './usuarios/usuario.entity';
 import { VentasModule } from './ventas/ventas.module';
 
 @Module({
@@ -39,7 +41,9 @@ import { VentasModule } from './ventas/ventas.module';
     EquipamientoModule,
     DashboardModule,
     ReportesModule,
+    TypeOrmModule.forFeature([Usuario]),
   ],
   controllers: [HealthController],
+  providers: [SeedService],
 })
 export class AppModule {}
