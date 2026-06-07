@@ -6,3 +6,4 @@ dist/
 coverage/
 backend/node_modules/
 frontend/
+CLAUDE.md
