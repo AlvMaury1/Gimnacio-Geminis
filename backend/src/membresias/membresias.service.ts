@@ -20,6 +20,8 @@ export class MembresiasService {
 
     const qb = this.repoMembresias
       .createQueryBuilder('membresia')
+      .leftJoinAndSelect('membresia.cliente', 'cliente')
+      .leftJoinAndSelect('membresia.plan', 'plan')
       .orderBy('membresia.fecha_inicio', 'DESC');
 
     if (query.clienteId) {
